@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+
+<html>
+<body>
+<head>
+<link rel="stylesheet" href="main.css">
+<script src="https://cdn.tiny.cloud/1/e3u4r82xjevyr2pl042kautfeq6lcoqx2wcubi3tbzwko6a1/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+<header>
+  <a href="#" class="toggle-menu">x</a>
+  <h1>Notes app</h1>
+</header>
+
+<aside class="sidebar">
+  <h3>Notes</h3>
+  <nav>
+    <ul>
+      <li>This is a note title</li>
+      <li>This is yet another note, also with a title</li><li>This is a note title</li>
+      <li>This is yet another note, also with a title</li>
+    </ul>
+  </nav>
+</aside>
+  
+<section class="main">
+  <textarea>
+     Welcome to TinyMCE!
+  </textarea>
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
+  </script>
+</section>
+</body>
+<script src="script.js"></script>
+
+</html>
