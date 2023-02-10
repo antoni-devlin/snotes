@@ -1,18 +1,13 @@
 <script>
-	// tinymce.init({
-    //   selector: 'textarea',
-    //   plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-    //   toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-    // });
+  import Editor from "@tinymce/tinymce-svelte"
+
+  let value = "Welcome to TinyMCE!"
 </script>
 
 <section class="main">
-	<textarea>Welcome to TinyMCE!
-	</textarea>
-	<script>
-	  
-	</script>
-  </section>
+  <Editor bind:value={value}></Editor>
+  <div>{@html value}</div>
+</section>
 
 <style>
 
