@@ -1,7 +1,8 @@
 <script>
-	
+	export let shown = false;
 </script>
 
+{#if shown}
 <aside class="sidebar">
 	<h3>Notes</h3>
 	<nav>
@@ -13,6 +14,7 @@
 	  </ul>
 	</nav>
   </aside>
+{/if}
 
 <style>
 

@@ -3,20 +3,16 @@
   import Sidebar from '$lib/sidebar.svelte'
   import Editor from '$lib/editor.svelte'
 
-  function toggleMenu() {
-    document
-  .getElementsByClassName("toggle-menu")[0]
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    document.getElementsByClassName("sidebar")[0].classList.toggle("toggled");
-  });
+  let showSidebar = false;
+  function toggleSidebar() {
+    showSidebar = !showSidebar;
   }
 
 </script>
 
-<Header />
+<Header on:togglemenu={toggleSidebar}/>
 
-<Sidebar />
+<Sidebar shown={showSidebar}/>
 
 <Editor />
 
